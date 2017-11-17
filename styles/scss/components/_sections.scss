@@ -1,0 +1,76 @@
+.section {
+  &-welcome {
+    height: 100vh;
+  }
+  &-indent {
+    padding: $px25 * 2 0;
+    &-100 {
+      padding: $px25 * 4 0;
+    }
+  }
+  &-steal-of-the-month {
+    padding: $px25 * 4 0;
+    text-align: center;
+    & .p-dark-md {
+      max-width: 46.875rem;
+      margin: $px25 * 2 auto;
+      line-height: $px15*2;
+    }
+  }
+  &-latest-works {
+    position: relative;
+    background-image: url("../../img/latestworks.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: $px25 * 4 0;
+    min-height: 100vh;
+    & .p-light-md {
+      max-width: 46.875rem;
+      text-align: center;
+      margin: $px25 * 2 auto;
+      line-height: $px15*2;
+    }
+    &:before {
+      content : "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      opacity : 0.5;
+    }
+  }
+  &-tifany {
+    background-color: $tifany;
+  }
+  &-blockquote {
+    position: relative;
+    background-image: url("../../img/blockq.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: $px25 * 4 0;
+    & .p-light-md {
+      max-width: 46.875rem;
+      text-align: center;
+      margin: $px25 * 2 auto;
+      line-height: $px15*2;
+    }
+    &:before {
+      content : "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      opacity : 0.5;
+    }
+  }
+}

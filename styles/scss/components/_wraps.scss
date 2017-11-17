@@ -1,0 +1,12 @@
+.wrap {
+  &-logo {
+    max-width: $px25*4 + $px25 +$px5;
+    padding: $px15 - $px5 0;
+  }
+  &-img {
+    overflow: hidden;
+  }
+}
+.max-width {
+  max-width: 100%;
+}

@@ -1,0 +1,13 @@
+.input {
+  &-search {
+    background-image: url(../../img/inputs/search-input.png);
+    background-color: transparent;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    padding: 10px 10px;
+    padding-right: 32px;
+    border: 1px solid #434a50;
+    color: #434a50;
+  }
+}

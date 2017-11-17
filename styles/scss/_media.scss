@@ -1,0 +1,157 @@
+@media (max-width: 1200px ) {
+  .resp-ind-xl {
+    margin-bottom: 15px;
+  }
+  .flex-content-center-xl {
+  }
+  .flex-content-around-xl {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .flex-content-between-xl {
+    align-items: center;
+    flex-direction: column;
+  }
+  .flex-align-center-xl {
+  }
+  .flex-wrap-xl {
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 930px ) {
+  .container {
+    padding: 0 10px;
+  }
+  .resp-ind-lg {
+    margin-bottom: 15px;
+  }
+  .nav-li {
+    width: 4.5rem;
+  }
+  .flex-content-center-lg {
+  }
+  .resp-ind-lg {
+    margin-bottom: 15px;
+  }
+  .flex-content-around-lg {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .flex-content-between-lg {
+    align-items: center;
+    flex-direction: column;
+  }
+  .flex-align-center-lg {
+  }
+  .flex-wrap-lg {
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ul-icon-list {
+    width: auto;
+    text-align: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    $i: 1;
+    & li:nth-child(even){
+      margin-left: 0;
+    }
+    @each $icon in $iconList {
+      .list-#{$i} {
+        max-width: 440px;
+        &:before {
+          margin: 5px auto;
+          float: none;
+          height: 38px;
+          $i:$i+1;
+        }
+      }
+    }
+    & p {
+      font-size: $px15 - $px2/2;
+      line-height: 25px;
+    }
+  }
+}
+@media (max-width: 768px ) {
+  .resp-ind-md {
+    margin-bottom: 15px;
+  }
+  .flex-content-center-md {
+  }
+  .flex-content-around-md {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .flex-content-between-md {
+    align-items: center;
+    flex-direction: column;
+  }
+  .flex-align-center-md {
+
+  }
+  .flex-wrap-md {
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav-li {
+    &:before {
+      content: none;
+    }
+  }
+  .h2-tifany-lg {
+    font-size: $px15*4 / 1.5;
+  }
+  .h2-white-lg {
+    font-size: $px15*4 / 1.5;
+  }
+  .h2-black-md {
+  font-size: ($px15*2+$px5)/1.5;
+  }
+  .h2-white-md {
+    font-size: ($px15*2+$px5)/1.5;
+  }
+  blockquote {
+    padding: 0 10px ;
+  }
+}
+@media (max-width: 576px ) {
+  .resp-ind-sm {
+    margin-bottom: 15px;
+  }
+  .flex-dir-cn-r-sm {
+    flex-direction: column-reverse;
+  }
+  .flex-content-center-sm {
+
+  }
+  .flex-content-around-sm {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .flex-content-between-sm {
+    align-items: center;
+    flex-direction: column;
+  }
+  .flex-align-center-sm {
+
+  }
+  .flex-wrap-sm {
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  .section-steal-of-the-month {
+    padding-left: $px5*2;
+    padding-right: $px5*2;
+  }
+  .section-latest-works {
+    padding-left: $px5*2;
+    padding-right: $px5*2;
+  }
+}

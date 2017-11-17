@@ -1,0 +1,217 @@
+.a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &-login {
+    @extend .a;
+    @extend .flex-align-center;
+    font-size: 11px;
+    font-family: $oxygen;
+    color: $loginRegister;
+    transition: 0.2s;
+    background: none;
+    border: none;
+    &:before{
+      content: "";
+      background-image: url("../../img/icons/login.png");
+      background-size: cover;
+      width: 13px;
+      float: left;
+      height: 13px;
+      margin-right: 5px;
+    }
+    &:hover {
+      color: $loginRegister;
+      transform: scale(1.1);
+    }
+  }
+  &-register {
+    @extend.a;
+    @extend.flex-align-center;
+    font-size: 11px;
+    font-family: $oxygen;
+    color: $loginRegister;
+    transition: 0.2s;
+    background: none;
+    border: none;
+    &:before{
+      content: "";
+      background-image: url("../../img/icons/register.png");
+      background-size: cover;
+      width: 13px;
+      float: left;
+      height: 13px;
+      margin-right: 5px;
+    }
+    &:hover {
+      color: $loginRegister;
+      transform: scale(1.1);
+    }
+  }
+}
+.h {
+  &2 {
+    font-family: $oxygen;
+    &-tifany {
+      @extend .h2;
+      color: $tifany;
+      &-sm {
+        @extend.h2-tifany;
+      }
+      &-md {
+        @extend.h2-tifany;
+      }
+      &-lg {
+        @extend.h2-tifany;
+        font-size: $px15*4;
+      }
+    }
+    &-white {
+      @extend .h2;
+      color: $white;
+      &-sm {
+        @extend.h2-white;
+        font-size: $px5*2 + $px2*2;
+      }
+      &-md {
+        @extend.h2-white;
+        font-size: $px15*2+$px5;
+      }
+      &-lg {
+        @extend.h2-white;
+        font-size: $px15*4;
+      }
+    }
+    &-black {
+      @extend .h2;
+      color: #000000;
+      &-sm {
+        @extend.h2-black;
+        font-size: $px5*2 + $px2*2;
+      }
+      &-md {
+        @extend.h2-black;
+        font-size: $px15*2+$px5;
+      }
+      &-lg {
+        @extend.h2-black;
+        font-size: $px15*4;
+      }
+    }
+  }
+  &3 {
+    font-family: $oxygen;
+    &-tifany {
+      @extend .h3;
+      color: $tifany;
+      &-sm {
+        @extend .h3-tifany;
+        font-size: $px5*2 + $px2*2;
+      }
+      &-md {
+        @extend .h3-tifany;
+        font-size: $px5*4+$px2*2;
+      }
+      &-lg {
+        @extend .h3-tifany;
+        font-size: $px15*2+$px5;
+      }
+    }
+    &-white {
+      @extend .h3;
+      color: $white;
+      &-sm {
+        @extend.h3-white;
+        font-size: $px5*2 + $px2*2;
+      }
+      &-md {
+        @extend.h3-white;
+        font-size: $px5*4+$px2*2;
+      }
+      &-lg {
+        @extend.h3-white;
+        font-size: $px15*2+$px5;
+      }
+    }
+    &-black {
+      @extend .h3;
+      color: #000000;
+      &-sm {
+        @extend.h3-black;
+        font-size: $px5*2 + $px2*2;
+      }
+      &-md {
+        @extend.h3-black;
+        font-size: $px5*4+$px2*2;
+      }
+      &-lg {
+        @extend.h3-black;
+        font-size: $px15*2+$px5;
+      }
+    }
+  }
+}
+.p {
+  &-count {
+    &-like {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      &:before {
+        @extend.p-count-like;
+        content: "";
+        background-image: url("../../img/counts/like.png");
+        background-size: cover;
+        display: block;
+        margin: 0 auto;
+        width: $px5*2 +$px2/2 + $px2;
+        height: $px5*2 +$px2/2 + $px2; ;
+      }
+    }
+  }
+  &-tifany {
+    color: $tifany;
+    font-family: $oxygen;
+    &-sm {
+      @extend .p-tifany;
+      font-size: 1rem - $px5;
+    }
+    &-md {
+      @extend .p-tifany;
+      font-size: 1rem + $px2;
+    }
+    &-lg {
+      @extend .p-tifany;
+    }
+  }
+  &-dark {
+    color:$dark;
+    font-family: $oxygen;
+    &-md {
+      @extend.p-dark;
+      font-size: 1rem + $px2;
+    }
+  }
+  &-light {
+    color: #ffffff;
+    font-family: $oxygen;
+    &-md {
+      @extend.p-light;
+      font-size: 1rem + $px2;
+    }
+    &-lg {
+      @extend.p-light;
+      font-size: $px25 - $px2/2;
+    }
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,111 @@
+.flex {
+  display: flex;
+  &-dir {
+    @extend.flex;
+    &-rw {
+    @extend.flex-dir;
+      flex-direction: row;
+    }
+    &-rw-r {
+      @extend.flex-dir;
+      flex-direction: row-reverse;
+    }
+    &-cn {
+      @extend.flex-dir;
+      flex-direction: column;
+    }
+    &-cn-r {
+      @extend.flex-dir;
+      flex-direction: column-reverse;
+      &-sm {
+        @extend.flex-dir-cn;
+      }
+    }
+  }
+  &-content {
+    @extend.flex;
+    &-center {
+    @extend.flex-content;
+      justify-content: center;
+      &-sm {
+    @extend.flex-content-center;
+      }
+      &-md {
+        @extend.flex-content-center;
+      }
+      &-lg {
+        @extend.flex-content-center;
+      }
+      &-xl {
+        @extend.flex-content-center;
+      }
+    }
+    &-around {
+      @extend.flex-content;
+      justify-content: space-around;
+      &-sm {
+        @extend.flex-content-around;
+      }
+      &-md {
+        @extend.flex-content-around;
+      }
+      &-lg {
+        @extend.flex-content-around;
+      }
+      &-xl {
+        @extend.flex-content-around;
+      }
+    }
+    &-between {
+      justify-content: space-between;
+      @extend.flex-content;
+      &-sm {
+        @extend.flex-content-between;
+      }
+      &-md {
+        @extend.flex-content-between;
+      }
+      &-lg {
+        @extend.flex-content-between;
+      }
+      &-xl {
+        @extend.flex-content-between;
+      }
+    }
+  }
+  &-align {
+    @extend.flex;
+    &-center {
+    @extend.flex-align;
+      align-items: center;
+      &-sm {
+        @extend.flex-align-center;
+      }
+      &-md {
+        @extend.flex-align-center;
+      }
+      &-lg {
+        @extend.flex-align-center;
+      }
+      &-xl {
+        @extend.flex-align-center;
+      }
+    }
+  }
+  &-wrap {
+    @extend.flex;
+    flex-wrap: wrap;
+    &-sm {
+      @extend.flex-wrap;
+    }
+    &-md {
+      @extend.flex-wrap;
+    }
+    &-lg {
+      @extend.flex-wrap;
+    }
+    &-xl {
+      @extend.flex-wrap;
+    }
+  }
+}

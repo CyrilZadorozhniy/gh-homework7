@@ -1,0 +1,81 @@
+.card {
+  &-cube {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    max-width: 18.125rem;
+    max-height: 18.125rem;
+    &:hover .card-cube-bottom {
+      padding-top: 0;
+      padding-bottom: 0;
+      max-height: 0;
+    }
+    img {
+      max-width: 100%;
+    }
+    &-hover {
+      background-color: rgba(0, 0, 0, 0.33);
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 1;
+      transition: all cubic-bezier(0, 1.67, 0.71, 0.58) .3s;
+      &:hover  {
+        z-index: 2;
+        opacity: 1;
+      }
+    }
+    &-bottom {
+      position: absolute;width: 100%;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.76);
+      opacity: (0.8);
+      padding: $px5*4;
+      overflow: hidden;
+      z-index: 2;
+      transition: all linear .3s ;
+      max-height: $px25*4 - $px5*2;
+      &:hover {
+        padding-top: $px5*4!important;
+        padding-bottom: $px5*4!important;
+        max-height: $px25*4!important;
+      }
+    }
+  }
+}
+.ul-icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 930px;
+  font-family: $oxygen;
+  $i: 1;
+    & li:nth-child(even){
+      margin-left: 35px;
+    }
+    & h3 {
+    @extend .indent-bottom-20;
+    }
+    @each $icon in $iconList {
+      .list-#{$i} {
+        max-width: 440px;
+        @extend .indent-bottom-50;
+        &:before {
+          content:"";
+          background-image: url("../../img/icons/#{$icon}");
+          background-repeat: no-repeat;
+          height: 100%;
+          margin-right: 30px;
+          display: block;
+          width: 38px;
+          float: left;
+          $i:$i+1;
+        }
+      }
+    }
+  & p {
+    font-size: $px15 - $px2/2;
+    line-height: 25px;
+  }
+}

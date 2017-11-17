@@ -1,0 +1,40 @@
+.header {
+  &-top-bar {
+    background-color: #000000;
+    padding: $px15 - $px5 - 0;
+  }
+  &-bottom-bar {
+    background-color: $header-bottom-bar;
+    padding: 0 $px15 - $px5;
+  }
+  &-section {
+    margin: 0 auto;
+    text-align: center;
+    &-grey {
+      @extend .header-section;
+      & .h2-black-md {
+      &:after {
+        content: "";
+        display: block;
+        width: $px25*2;
+        height: $px5;
+        margin: $px15*2 auto;
+        background-color: #eeeeee;
+        }
+      }
+    }
+    &-light {
+      @extend .header-section;
+      & .h2-white-md {
+        &:after {
+          content: "";
+          display: block;
+          width: $px25*2;
+          height: $px5;
+          margin: $px15*2 auto;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

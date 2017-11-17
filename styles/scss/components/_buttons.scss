@@ -1,0 +1,114 @@
+button {
+  cursor: pointer;
+  outline: none !important;
+}
+.button {
+  cursor: pointer;
+  outline: none !important;
+  font-size: $px15 - $px5 + $px2;
+  font-family: $oxygen;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: $px15 0;
+  min-width: 8.4375rem;
+
+ &-type {
+   &-one {
+     @extend .button;
+     background: $tifany;
+     border: 2px solid $tifany;
+     color: $white;
+     padding: $px15 0;
+     transition: 0.2s;
+     &:hover {
+       background: none;
+       color: $tifany;
+     }
+   }
+   &-two {
+     @extend .button;
+     background: none;
+     border: 2px solid $tifany;
+     color: $tifany;
+     padding: $px15 0;
+     transition: 0.2s;
+     &:hover {
+       background: $tifany;
+       color: $white;
+     }
+   }
+   &-three {
+     @extend .button;
+     background: none;
+     border: 2px solid $white;
+     color: $white;
+     padding: $px15 $px15;
+     transition: 0.2s;
+     &:after {
+       content:"";
+       background-image: url("../../img/icons/arrow-left.png");
+       width: 6px;
+       height: 12px;
+       display: block;
+       float: right;
+       margin-left: 10px;
+     }
+   }
+ }
+  &-circle {
+    max-width: 48px;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &-sirch {
+      @extend .button-circle;
+      padding: 15px;
+      background-color: $tifany;
+      border: none;
+      border-radius: 50%;
+      &:before {
+        content: "";
+        background-image: url("../../img/icons/serch.png");
+        background-size: cover;
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &-like {
+      @extend .button-circle;
+      padding: 15px;
+      background-color: $tifany;
+      border: none;
+      border-radius: 50%;
+      &:before {
+        content: "";
+        background-image: url("../../img/icons/like.png");
+        background-size: cover;
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &-stick {
+      @extend .button-circle;
+      padding: 15px;
+      background-color: $tifany;
+      border: none;
+      border-radius: 50%;
+      &:before {
+        content: "";
+        background-image: url("../../img/icons/stick.png");
+        background-size: cover;
+        display: block;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

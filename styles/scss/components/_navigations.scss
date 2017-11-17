@@ -1,0 +1,35 @@
+.nav {
+  &-link {
+    @extend.a;
+    text-transform: uppercase;
+    font-family: $oxygen;
+    font-size: $px15 - $px5 +$px2;
+    color: $white;
+  }
+  &-li {
+    width: $px25 * 4;
+    text-align: center;
+  }
+  $i:1;
+  @each $clolor in $topPalitra {
+    &-li-#{$i} {
+      @extend .nav-li;
+      $i: $i+1;
+      &:before {
+        content: "";
+        background-color: #{$clolor};
+        max-width: 100%;
+        display: block;
+        height: $px15 - $px2 ;
+      }
+      & a{
+        padding: $px25 0;
+        transition: 0.2s;
+      }
+      & a:hover {
+        color: #{$clolor};
+        transform: scale(1.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.carousel-indicators .active {
+  color: $tifany;
+  background-color: $tifany;
+}
+.carousel-indicators {
+  bottom: 25px;
+}
+.bg-light {
+  background: none!important;
+}
+.navbar {
+  padding: 0 !important;
+}
+.navbar-collapse {
+  justify-content: flex-end!important;
+}
+.navbar-toggler {
+  outline: none !important;
+  cursor: pointer;
+}

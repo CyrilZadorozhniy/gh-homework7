@@ -1,0 +1,48 @@
+.indent {
+  &-left {
+    &-10 {
+      margin-left: $px15 - $px5;
+    }
+    &-15 {
+       margin-left: $px15;
+     }
+    &-30 {
+      margin-left: $px15 *2;
+    }
+    &-35 {
+      margin-left: $px15 * 2 + $px5;
+    }
+    &-50 {
+      margin-left: $px25 * 2;
+    }
+  }
+  &-bottom {
+    &-10 {
+      margin-bottom: $px15 - $px5;
+    }
+    &-15 {
+      margin-bottom: $px15;
+    }
+    &-20 {
+      margin-bottom: $px15 + $px5;
+    }
+    &-30 {
+      margin-bottom: $px15 *2;
+    }
+    &-35 {
+      margin-bottom: $px15 * 2 + $px5;
+    }
+    &-50 {
+      margin-bottom: $px25 * 2;
+    }
+    &-100 {
+      margin-bottom: $px25 * 4;
+    }
+  }
+  &-text {
+    &-hide {
+      position: absolute;
+      text-indent: -9999px;
+    }
+  }
+}
