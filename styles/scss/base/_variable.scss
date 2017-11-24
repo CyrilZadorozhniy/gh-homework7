@@ -5,9 +5,6 @@ $serchInput:#434a50;
 $dark: #3b4954;
 $loginRegister:#85939f;
 
-$tifany:#02baab;
-
-
 $palitra-1:#ffae00;
 $palitra-2:#fc7100;
 $palitra-3:#e51c5e;
@@ -16,10 +13,15 @@ $palitra-5:#6d0fae;
 $palitra-6:#33227a;
 $palitra-7:#0c8fcc;
 
+$tifany:#02baab;
+
+
 $topPalitra: $palitra-1,$palitra-2,$palitra-3,$palitra-4,$palitra-5,$palitra-6,$palitra-7;
+$bottomPalitra: $palitra-5,$palitra-7,$palitra-3,$palitra-2;
 
 //fonts
 $oxygen: 'Oxygen', sans-serif;
+$lato: 'Lato', sans-serif;
 
 //inputs
 
@@ -37,3 +39,5 @@ $carusels: "slide-1.jpg","slide-1.jpg","slide-1.jpg";
 
 //icons
 $iconList: "direction1.png","direction2.png","direction3.png","direction4.png";
+
+//links

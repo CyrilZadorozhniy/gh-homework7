@@ -1,7 +1,87 @@
 .a {
   text-decoration: none;
+  font-family: $oxygen;
   &:hover {
     text-decoration: none;
+  }
+  &-tag {
+    font-size: 14px;
+    color: #3b4954;
+    font-family: $oxygen;
+    align-items: center;
+    display: flex;
+    &:before {
+      content: "\f02c";
+      font-family: FontAwesome;
+      float: left;
+      width: 20px;
+      color: $tifany;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+  }
+  &-user {
+    font-size: 12px;
+    color: #85939f;
+    font-family: $oxygen;
+    align-items: center;
+    display: flex;
+    &:before {
+      content: "\f007";
+      font-family: FontAwesome;
+      float: left;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3b4954;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  &-date {
+    font-size: 12px;
+    color: #85939f;
+    font-family: $oxygen;
+    align-items: center;
+    display: flex;
+    &:before {
+      content: "\f017";
+      font-family: FontAwesome;
+      float: left;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3b4954;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+  &-quote {
+    font-size: 12px;
+    color: #85939f;
+    font-family: $oxygen;
+    align-items: center;
+    display: flex;
+    &:before {
+      content: "\f10d";
+      font-family: FontAwesome;
+      float: left;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3b4954;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
   }
   &-login {
     @extend .a;
@@ -49,12 +129,22 @@
       transform: scale(1.1);
     }
   }
+  $i:1;
+  @each $link in facebook, twitter, youtube, inst, pinter,{
+    &-#{$link} {
+      background-image: url("../../img/links/link#{$i}.png");
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      $i: $i+1;
+    }
+  }
 }
 .h {
   &2 {
     font-family: $oxygen;
     &-tifany {
-      @extend .h2;
+      font-family: $oxygen;
       color: $tifany;
       &-sm {
         @extend.h2-tifany;
@@ -68,7 +158,7 @@
       }
     }
     &-white {
-      @extend .h2;
+      font-family: $oxygen;
       color: $white;
       &-sm {
         @extend.h2-white;
@@ -84,7 +174,7 @@
       }
     }
     &-black {
-      @extend .h2;
+      font-family: $oxygen;
       color: #000000;
       &-sm {
         @extend.h2-black;
@@ -103,7 +193,7 @@
   &3 {
     font-family: $oxygen;
     &-tifany {
-      @extend .h3;
+      font-family: $oxygen;
       color: $tifany;
       &-sm {
         @extend .h3-tifany;
@@ -119,7 +209,7 @@
       }
     }
     &-white {
-      @extend .h3;
+      font-family: $oxygen;
       color: $white;
       &-sm {
         @extend.h3-white;
@@ -135,7 +225,7 @@
       }
     }
     &-black {
-      @extend .h3;
+      font-family: $oxygen;
       color: #000000;
       &-sm {
         @extend.h3-black;
@@ -143,7 +233,7 @@
       }
       &-md {
         @extend.h3-black;
-        font-size: $px5*4+$px2*2;
+        font-size: 18px;
       }
       &-lg {
         @extend.h3-black;
@@ -169,10 +259,23 @@
         height: $px5*2 +$px2/2 + $px2; ;
       }
     }
+    &-coment {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: "";
+        background-image: url("../../img/counts/coment.png");
+        background-size: cover;
+        display: block;
+        min-width: 19px;
+        min-height: 14px;
+        float: left;
+        margin-right: 5px;
+      }
+    }
   }
   &-tifany {
     color: $tifany;
-    font-family: $oxygen;
     &-sm {
       @extend .p-tifany;
       font-size: 1rem - $px5;
@@ -206,6 +309,234 @@
     }
   }
 }
+.list {
+  &-related {
+    @extend .flex-content-between-md;
+    li {
+      font-family: $oxygen;
+      max-width: 200px;
+      &:before {
+        content: "\f11c";
+        font-family: FontAwesome;
+        color: #c7c7c7;
+        margin-bottom: 20px;
+        display: block;
+      }
+      p {
+        font-size: 12px;
+        color:#3b4954;
+        line-height:18px;
+      }
+      a{
+        font-size: 12px;
+        color: $tifany;
+        line-height:18px;
+      }
+    }
+  }
+  &-tag {
+    display: flex;
+    align-items: center;
+    li {
+      margin-left: 10px;
+      &:last-child {
+        a {
+          &:after {
+            content: "";
+            display: none;
+          }
+        }
+      }
+      a {
+        color: $tifany;
+        &:after {
+          content: ",";
+          color: #474e52;
+        }
+        &:hover {
+          color: #6d0fae;
+        }
+      }
+    }
+  }
+  &-network {
+    display: flex;
+    align-items: center;
+    li {
+      background-image: url("../../../img/links/net1.png");
+      margin-left: 5px;
+      width: 32px;
+      height: 32px;
+      &:first-child {
+        margin: 0;
+      }
+      a {
+        display: block;
+        width: 32px;
+        height: 32px;
+      }
+    }
+    p {
+      font-family: $oxygen;
+      font-weight: bold;
+      position: relative;
+      font-size: 12px;
+      padding: 9px;
+      border: 1px solid #c2c2c2;
+      border-radius: 5px;
+      margin-left: 20px;
+      &:before {
+        content: "";
+        background-image: url("../../img/arr.png");
+        height: 14px;
+        width: 7px;
+        transform: translateX(-6px);
+        position: absolute;
+        display: block;
+        left: 0;
+      }
+    }
+    $i:1;
+    @each $net in net1,net2,net3,net4,net5 {
+      li:nth-child(#{$i}){
+        background-image: url("../../img/links/#{$net}.png");
+        $i: $i+1;
+      }
+    }
+  }
+  &-category {
+    display: flex;
+    flex-direction: column;
+    li {
+      font-family: $oxygen;
+      position: relative;
+      display: flex;
+      padding: 15px 0;
+      border-bottom: 1px solid #edeeef;
+      &:last-child {
+        border: none;
+      }
+      &:before {
+        content: "";
+        background-image: url(../../img/icons/category.png);
+        display: block;
+        width: 13px;
+        height: 11px;
+        margin-left: 10px;
+      }
+      a {
+        margin-left: 10px;
+        font-size: 12px;
+        color: $tifany;
+      }
+    }
+  }
+  &-recent-coments {
+    li {
+      font-family: $oxygen;
+      padding: 10px 0;
+      border-bottom: 1px solid #edeeef;
+      &:before {
+        content: "\f10d";
+        font-family: FontAwesome;
+        color: #c3c3c3;
+        float: left;
+      }
+      .text-wrap {
+        margin-left: 25px;
+    }
+      &:last-child {
+        border: none;
+      }
+      span {
+        font-size: 12px;
+        color: #3b4954;
+        display: block;
+        line-height: 18px;
+      }
+      a {
+        font-size: 12px;
+        color: $tifany;
+        line-height: 18px;
+      }
+    }
+  }
+  &-tagcloud {
+    font-family: $oxygen;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      a {
+        border: 1px solid #eeeeee;
+        padding: 12px 9px;
+        font-size: 12px;
+        display: block;
+        color: $tifany;
+        transition: .2s;
+        &:hover {
+          background: $tifany;
+          border: 1px solid $tifany;
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.paragraf {
+  font-family: $lato;
+  line-height: 24px;
+  h3 {
+    font-size: 18px;
+    color: #3b4954;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    color: #3b4954;
+    margin-bottom: 30px;
+  }
+  .wrap-img {
+    margin-bottom: 30px!important;
+    max-width: 210px;
+    max-height: 160px;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+.blockquote {
+  &-type {
+    &-one {
+      text-align: center;
+      position: relative;
+      max-width: 710px;
+      margin: 0 auto;
+    }
+    &-two {
+      margin-left: 30px;
+      padding-left: 15px;
+      border-left: 5px solid #eeeeee;
+      font-family: $lato;
+      p {
+        font-size: 24px;
+        line-height: 36px;
+        color: #c69c6d;
+        margin-bottom: 15px;
+      }
+      &-footer {
+        font-family: $lato;
+        p {
+          color: #c69c6d;
+          font-size: 14px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
 .bold {
   font-weight: bold;
 }
@@ -214,4 +545,7 @@
 }
 .text-center {
   text-align: center;
+}
+.max {
+  width: 100%;
 }

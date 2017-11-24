@@ -52,6 +52,66 @@ button {
        display: block;
        float: right;
        margin-left: 10px;
+       transition: 0.2s;
+     }
+     &:hover {
+       transform: scale(1.05);
+       &:after {
+        transform: rotate(180deg) translateX(-5px);
+       }
+     }
+     &:active {
+       transform: scale(.8);
+       &:after {
+         transform: rotate(180deg) scale(1.1);
+       }
+     }
+   }
+   &-four {
+     @extend .button;
+     background: none;
+     border: 2px solid $tifany;
+     color: $white;
+     padding: $px15 $px15;
+     transition: 0.2s;
+     text-transform: none;
+     font-size: 12px;
+     &:after {
+       content:"";
+       background-image: url("../../img/icons/arrow-left.png");
+       width: 6px;
+       height: 12px;
+       display: block;
+       float: right;
+       margin-left: 10px;
+       transition: 0.2s;
+       transform: rotate(-90deg);
+     }
+     &:hover {
+       text-decoration: none;
+       color: #ffffff;
+       transform: scale(1.05);
+       &:after {
+         transform: rotate(180deg) translateX(-5px);
+       }
+     }
+     &:active {
+       transform: scale(.8);
+       &:after {
+         transform: rotate(180deg) scale(1.1);
+       }
+     }
+   }
+   &-five {
+     @extend .button;
+     background: #ffffff;
+     border: 2px solid $tifany;
+     color: $tifany;
+     padding: $px15 $px15;
+     transition: 0.2s;
+     &:hover {
+       background: none;
+       transform: scale(1.05);
      }
    }
  }

@@ -2,17 +2,20 @@
 @import "compass/css3";
 @import "base/mixins";
 @import "base/variable";
+
 @import "main";
+@import "components/bootstrap";
 @import "components/containers";
 @import "components/headers";
 @import "components/wraps";
 @import "components/inputs";
 @import "components/flex";
-@import "components/text";
 @import "components/indents";
 @import "components/navigations";
 @import "components/sections";
 @import "components/buttons";
-@import "components/bootstrap";
 @import "components/cards";
+@import "components/text";
+@import "components/footers";
+@import "components/forms";
 @import "media";

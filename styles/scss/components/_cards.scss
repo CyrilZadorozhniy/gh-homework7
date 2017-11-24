@@ -44,7 +44,199 @@
       }
     }
   }
+  &-article {
+    width: 290px;
+    border-bottom: 1px solid #c3c3c3;
+    .wrap-img {
+      width: 290pxсв;
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-family: $oxygen;
+      font-size: 24px;
+      color: $tifany;
+      line-height: 35px;
+    }
+    p {
+      font-family: $oxygen;
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 30px;
+      line-height: 25px;
+    }
+    button {
+      font-family: $oxygen;
+      font-size: 14px;
+      color: $tifany;
+      margin-bottom: 30px;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+  }
+  &-expiriance {
+    position: relative;
+    width: 215px;
+    text-align: center;
+    p {
+      @extend .p-light-md;
+      line-height: 25px;
+    }
+    h2 {
+      @extend .h2-white-lg;
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+     .wrap-img {
+       @extend .flex-align-center;
+       @extend .flex-content-center;
+       width: 215px;
+       height: 215px;
+       border: 4px solid #ffffff;
+       border-radius: 50%;
+       margin-bottom: 30px;
+       img {
+         width: 100px;
+       }
+     }
+    &:after {
+      content: ". . .";
+      color: white;
+      font-size: 70px;
+      position: absolute;
+      top: 50px;
+      right: -115px;
+    }
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+  &-team {
+    &:hover .card-team-buttonbar-hover {
+      max-height: 0;
+      padding: 0;
+      opacity:0 ;
+      min-height: 0;
+    }
+    &:hover .text-wrap {
+      opacity: 0;
+    }
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    max-width: 210px;
+    height: 388px;
+    .wrap-img {
+      max-width: 210px;
+      max-height: 290px;
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+      }
+    }
+    &-buttonbar {
+      font-family: "Oxygen", sans-serif;
+      background: #ffffff;
+      position: absolute;
+      bottom: 0;
+      border: 1px solid #eeeeee;
+      width: 100%;
+      z-index: 1;
+      button {
+        margin: 30px 0;
+      }
+      &:hover .card-team-buttonbar-hover {
+        min-height: 136px !important;
+        height: 0;
+        padding: auto;
+        opacity:1 ;
+      }
+
+      &:hover .text-wrap {
+        min-height: 61px!important;
+        opacity: 1;
+      }
+      &-hover {
+        transition: all cubic-bezier(0.21, 2.04, 0.28, 0.43) 0.3s;
+        max-height: 136px;
+       .text-wrap {
+         transition: all 0.3s;
+         border: 1px solid #eeeeee;
+         margin: 0 auto;
+         width: 140px;
+         background: #fff;
+         transform: translateY(-50%);
+         padding: 10px;
+         h3 {
+
+           font-size: 14px;
+           color: $tifany;
+         }
+         p {
+           font-size: 12px;
+           color: #c4c4c4;
+           padding: 0;
+         }
+        }
+        p {
+          color: #3b4954;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 25px;
+          padding: 0 14px;
+        }
+      }
+    }
+  }
+  &-latestwork {
+    text-align: center;
+    h3 {
+      @extend .h3-black-md, .resp-text-center, .indent-bottom-15;
+    }
+    .wrap-img {
+      max-width: 210px;
+      max-height: 160px ;
+      margin-bottom: 20px;
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    .button-left {
+      border: none;
+      background: none;
+      transform: rotate(180deg);
+      transition: 0.2s;
+      &:hover {
+        transform: scale(1.2) rotate(180deg);
+      }
+      &:before {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: $tifany;
+      }
+    }
+    .button-right {
+      vertical-align: middle;
+      margin-left: 20px;
+      border: none;
+      background: none;
+      transition: 0.2s;
+      &:before {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: $tifany;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
+
 .ul-icon-list {
   display: flex;
   flex-wrap: wrap;
