@@ -10,6 +10,7 @@
     font-family: $oxygen;
     align-items: center;
     display: flex;
+    transition: 0.2s;
     &:before {
       content: "\f02c";
       font-family: FontAwesome;
@@ -21,6 +22,52 @@
       justify-content: center;
       align-items: center;
       margin-right: 10px;
+    }
+  }
+  &-like {
+    font-size: 11px;
+    color: #85939f;
+    font-family: $oxygen;
+    align-items: center;
+    display: flex;
+    transition: 0.2s;
+    &:before {
+      content: "\f08a";
+      font-family: FontAwesome;
+      float: left;
+      color: #85939f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $loginRegister;
+      transform: scale(1.1);
+    }
+  }
+  &-logout {
+    font-size: 11px;
+    color: #85939f;
+    font-family: $oxygen;
+    align-items: center;
+    display: flex;
+    transition: 0.2s;
+    &:before {
+      content: "\f08b";
+      font-family: FontAwesome;
+      float: left;
+      color: #85939f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $loginRegister;
+      transform: scale(1.1);
     }
   }
   &-user {
@@ -40,7 +87,7 @@
       align-items: center;
       background-color: #3b4954;
       border-radius: 50%;
-      margin-right: 10px;
+      margin-right: 5px;
     }
   }
   &-date {
@@ -101,6 +148,25 @@
       height: 13px;
       margin-right: 5px;
     }
+  }
+    &-cart {
+      @extend .a;
+      @extend .flex-align-center;
+      font-size: 11px;
+      font-family: $oxygen;
+      color: $loginRegister;
+      transition: 0.2s;
+      background: none;
+      border: none;
+      &:after{
+        content: "";
+        background-image: url("../../img/icons/cart.png");
+        background-size: cover;
+        width: 16px;
+        float: left;
+        height: 13px;
+        margin-left: 5px;
+      }
     &:hover {
       color: $loginRegister;
       transform: scale(1.1);
@@ -278,6 +344,7 @@
     color: $tifany;
     &-sm {
       @extend .p-tifany;
+      font-family: $oxygen;
       font-size: 1rem - $px5;
     }
     &-md {
@@ -291,6 +358,11 @@
   &-dark {
     color:$dark;
     font-family: $oxygen;
+    &-sm {
+      @extend.p-dark;
+      font-size: 14px;
+      line-height: 24px;
+    }
     &-md {
       @extend.p-dark;
       font-size: 1rem + $px2;
@@ -461,6 +533,32 @@
       }
     }
   }
+  &-portfolio-menu {
+    display: flex;
+    font-family: $oxygen;
+    .active {
+      border-top: 5px solid #eeeeee;
+      a {
+        color: #3b4954;
+      }
+    }
+    li {
+     border-top: 5px solid #ffffff;
+      padding-top: 12px;
+      margin-left: 15px;
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:hover {
+        border-top: 5px solid #eeeeee;
+      }
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        color: $tifany;
+      }
+    }
+  }
   &-tagcloud {
     font-family: $oxygen;
     display: flex;
@@ -481,6 +579,17 @@
           color: #ffffff;
           text-decoration: none;
         }
+      }
+    }
+  }
+  &-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    .card-cube {
+      margin-right: 30px;
+      margin-bottom: 30px;
+      &:nth-child(3n + 3) {
+        margin-right: 0px;
       }
     }
   }
